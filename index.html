@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tres en Raya</title>
+
+    <!-- Tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- *enlace a los estilos -->
+    <!-- Estilos generales -->
+    <link href="styles/styles.css" type="text/css" rel="stylesheet">
+    <!-- Estilos especificos -->
+    <link href="styles/modal.css" type="text/css" rel="stylesheet">
+    <link href="styles/table.css" type="text/css" rel="stylesheet">
+    <link href="styles/player.css" type="text/css" rel="stylesheet">
+
+    <!-- *Enlace de las funciones -->
+    <!-- JS donde se declaran todas las variables -->
+    <script src="functions/main.js" defer></script>
+    <!-- JS de las funciones de la página -->
+    <script src="functions/modal.js" defer></script> <!--Funcion que abre la modal-->
+    <script src="functions/table.js" defer></script> <!--Funcion que crea la tabla de juego-->
+    <script src="functions/play.js" defer></script> <!--Funcion del juego-->
+</head>
+<body>
+    <main>
+        <section class="flexRow">
+            <article id="table">
+            </article>
+            <article class="players" id="players_information">
+                <div id="player1_information" class="playerInfo">
+                    <div class="p1init">
+                        <h3 id="player1_initial"></h3>
+                    </div>
+                    <h2 id="player1_name"></h2>
+                    <p id="p1wins"></p>
+                </div>
+                <div id="player2_information" class="playerInfo">
+                    <div class="p2init">
+                        <h3 id="player2_initial"></h3>
+                    </div>
+                    <h2 id="player2_name"></h2>
+                    <p id="p2wins"></p>
+                </div>
+            </article>
+        </section>
+        <section class="resetButtonBlock">
+            <div class="inputButtonBg">
+                <input type="button" value="Reset" id="resetBtn">
+                <div class="inputButtonBgHover"></div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- MODAL -->
+    <div id="modal" role="dialog" class="flexModal">
+        <div class="modal">
+            <header>
+                <h1>Tres en Raya</h1>
+            </header>
+            <form name="getNames">
+                <div class="formSpace">
+                    <label>Nombre del Jugador 1:</label>
+                    <input type="text" id="inputPlayer1" class="p1input">
+                </div>
+                <div class="formSpace">
+                    <label>Nombre del Jugador 2:</label>
+                    <input type="text" id="inputPlayer2" class="p2input">
+                </div>
+                <div class="inputButtonBg">
+                    <input type="submit" value="Start" id="submitGetData">
+                    <div class="inputButtonBgHover"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
